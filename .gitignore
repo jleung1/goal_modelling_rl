@@ -1,1 +1,5 @@
 **/__pycache__
+save/high_replay/*
+save/low_replay/*
+save/models_and_data/*
+save/replay/*

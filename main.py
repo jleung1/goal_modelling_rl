@@ -23,11 +23,11 @@ from agents.qrm_agent.model import QrmDQN
 from agents.qrm_agent.qrm_agent import QrmAgent
 
 parser = argparse.ArgumentParser(
-    description="Goal-Oriented Deep Reinforcement Learning"
+    description="Goal Modelling for Deep Reinforcement Learning Agents"
 )
 
 parser.add_argument("--episodes", default=50000, help="Number of episodes to run")
-parser.add_argument("--seed", default=0)
+parser.add_argument("--seed", default=0, help="Random seed to use")
 parser.add_argument("--batch_size", default=32)
 parser.add_argument(
     "--env",
@@ -38,7 +38,7 @@ parser.add_argument(
     "--agent", choices=["gnet", "gnet_without_ga", "daqn", "qrm"], default="gnet"
 )
 
-parser.add_argument("--gpu", default=0)
+parser.add_argument("--gpu", default=0, help="If you have multiple GPUs, choose which one to use")
 parser.add_argument("--start_frame", default=0, help="Set the starting frame (useful for loading a checkpoint)")
 parser.add_argument("--episode", default=0, help="Set the starting episode (useful for loading a checkpoint)")
 # Loading
@@ -48,7 +48,7 @@ parser.add_argument(
 parser.add_argument(
     "--xvfb", dest="xvfb", action="store_true", help="Use xvfb (for AI2-THOR)"
 )
-parser.add_argument("--save", dest="save", action="store_true")
+parser.add_argument("--save", dest="save", action="store_true", help="Enable checkpoint saving (saves replay buffers, which may require a few GBs of storage)")
 parser.add_argument("--preset", dest="preset", action="store_true", help="Use a preset version of the environment (two keys env only)")
 
 args = parser.parse_args()
