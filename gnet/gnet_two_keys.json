@@ -1,0 +1,32 @@
+{
+    "start" : {
+        "goal_selection_options": ["obtained yellow key", "obtained green key"],
+        "output_arc_type": "choice",
+        "input_arc_count": 0
+    },
+    "obtained yellow key": {
+        "goal_selection_options": ["opened yellow door"],
+        "output_arc_type": "choice",
+        "input_arc_count": 1
+    },
+    "obtained green key": {
+        "goal_selection_options": ["opened green door"],
+        "output_arc_type": "choice",
+        "input_arc_count": 1
+    },
+    "opened green door": {
+        "goal_selection_options": ["end"],
+        "output_arc_type": "choice",
+        "input_arc_count": 1
+    },
+    "opened yellow door": {
+        "goal_selection_options": ["end"],
+        "output_arc_type": "choice",
+        "input_arc_count": 1
+    },
+    "end": { 
+            "input_arc_count": 2,
+            "output_arc_type": "None",
+            "goal_selection_options": []
+    }
+}

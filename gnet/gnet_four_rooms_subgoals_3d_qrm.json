@@ -1,0 +1,27 @@
+{
+    "start" : {
+        "goal_selection_options": ["reached yellow subgoal", "reached blue subgoal"],
+        "output_arc_type": "choice",
+        "input_arc_count": 0
+    },
+    "reached yellow subgoal": {
+        "goal_selection_options": ["reached all subgoals"],
+        "output_arc_type": "choice",
+        "input_arc_count": 1
+    },
+    "reached blue subgoal": {
+        "goal_selection_options": ["reached all subgoals"],
+        "output_arc_type": "choice",
+        "input_arc_count": 1
+    },
+    "reached all subgoals": {
+        "goal_selection_options": ["end"],
+        "output_arc_type": "choice",
+        "input_arc_count": 2
+    },
+    "end": {
+        "goal_selection_options": [],
+        "output_arc_type": "None",
+        "input_arc_count": 1
+    }
+}
