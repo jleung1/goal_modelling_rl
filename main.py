@@ -26,7 +26,7 @@ parser = argparse.ArgumentParser(
     description="Goal-Oriented Deep Reinforcement Learning"
 )
 
-parser.add_argument("--episodes", default=50000)
+parser.add_argument("--episodes", default=50000, help="Number of episodes to run")
 parser.add_argument("--seed", default=0)
 parser.add_argument("--batch_size", default=32)
 parser.add_argument(
@@ -39,8 +39,8 @@ parser.add_argument(
 )
 
 parser.add_argument("--gpu", default=0)
-parser.add_argument("--start_frame", default=0)
-parser.add_argument("--episode", default=0)
+parser.add_argument("--start_frame", default=0, help="Set the starting frame (useful for loading a checkpoint)")
+parser.add_argument("--episode", default=0, help="Set the starting episode (useful for loading a checkpoint)")
 # Loading
 parser.add_argument(
     "--load", dest="load", action="store_true", help="Load existing checkpoint"
@@ -49,7 +49,7 @@ parser.add_argument(
     "--xvfb", dest="xvfb", action="store_true", help="Use xvfb (for AI2-THOR)"
 )
 parser.add_argument("--save", dest="save", action="store_true")
-parser.add_argument("--preset", dest="preset", action="store_true")
+parser.add_argument("--preset", dest="preset", action="store_true", help="Use a preset version of the environment (two keys env only)")
 
 args = parser.parse_args()
 
