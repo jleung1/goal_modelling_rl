@@ -1,6 +1,6 @@
 # Goal Modelling for Deep Reinforcement Learning Agents
 
-Paper: Link will be added later
+Paper: https://2021.ecmlpkdd.org/wp-content/uploads/2021/07/sub_1058.pdf
 
 Run main.py to run the experiments. To view the available arguments, use:
 ```python main.py --help```
